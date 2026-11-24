@@ -12,17 +12,21 @@
 
 57 merged pull requests in 29 upstream projects, cited in 12 release notes across 11 projects.
 
-| Project | What I fixed | Shipped in |
-|---|---|---|
-| [Open Policy Agent](https://github.com/open-policy-agent/opa/pull/8887) | Integers above 64 bits lost precision in Rego arithmetic and aggregates, so policies decided on wrong numbers. Also restored error locations for rewritten head variables ([#8885](https://github.com/open-policy-agent/opa/pull/8885)). | [v1.19.0](https://github.com/open-policy-agent/opa/releases/tag/v1.19.0) |
-| [fedimint](https://atishay.tech/oss/fedimint-fedimint/) | 8 merged: panics on untrusted durations and timestamps, Lightning fee limits checked on both fee parts ([#8921](https://github.com/fedimint/fedimint/pull/8921)), deposit retries the Bitcoin backend cannot prove ([#9202](https://github.com/fedimint/fedimint/pull/9202)). | [v0.12.0](https://github.com/fedimint/fedimint/releases/tag/v0.12.0), [v0.13.0](https://github.com/fedimint/fedimint/releases/tag/v0.13.0) |
-| [Cilium](https://github.com/cilium/cilium/pull/47516) | Envoy xDS node-IP validation with `netip.ParseAddr`. | [v1.21.0-pre.0](https://github.com/cilium/cilium/releases/tag/v1.21.0-pre.0) |
-| [OpenTelemetry Python](https://atishay.tech/oss/open-telemetry-opentelemetry-python-contrib/) | `IndexError` on comment-only SQL statements in the psycopg, psycopg2 and SQLAlchemy instrumentations. | [v0.66b0](https://github.com/open-telemetry/opentelemetry-python-contrib/releases/tag/v0.66b0) |
-| [SHAP](https://github.com/shap/shap/pull/5164) | KernelExplainer now matches DataFrame columns to the background data by name. | [v0.53.0](https://github.com/shap/shap/releases/tag/v0.53.0) |
-| [Meshery](https://github.com/meshery/meshery/pull/20733), [OpenEverest](https://github.com/openeverest/openeverest/pull/2851) | Nil-pointer crashes in MeshSync auto-registration and in JWT key loading. | [v1.0.60](https://github.com/meshery/meshery/releases/tag/v1.0.60), [v2.0.0-dev.2](https://github.com/openeverest/openeverest/releases/tag/v2.0.0-dev.2) |
-| [Hyperledger Fabric](https://github.com/hyperledger/fabric/pull/5529) | Database errors silently swallowed in multi-key ledger queries. | merged |
+Ordered by project size (GitHub stars, Nov 2026).
 
-Also merged in Braidpool (6), Podman (4), openswap (4), pyannote-metrics (3), rust-lightning, pixi, Kmesh, pypdf, Opik, MaxText and others. [Full list](https://atishay.tech/oss/).
+| Project | Stars | What I fixed | Shipped in |
+|---|---|---|---|
+| [Podman](https://atishay.tech/oss/podman-container-tools-podman/) | 33k | 4 merged: values containing `=` were cut off in remote prune filters ([#29653](https://github.com/podman-container-tools/podman/pull/29653)) and volume subpaths ([#29654](https://github.com/podman-container-tools/podman/pull/29654)); empty command output handled. | merged |
+| [Cilium](https://github.com/cilium/cilium/pull/47516) | 26k | Envoy xDS node-IP validation with `netip.ParseAddr`. | [v1.21.0-pre.0](https://github.com/cilium/cilium/releases/tag/v1.21.0-pre.0) |
+| [SHAP](https://github.com/shap/shap/pull/5164) | 26k | KernelExplainer now matches DataFrame columns to the background data by name. | [v0.53.0](https://github.com/shap/shap/releases/tag/v0.53.0) |
+| [Opik](https://github.com/comet-ml/opik/pull/8536) | 23k | LLM-eval SDK: placeholders inside chat-prompt video parts are now validated. | merged |
+| [Hyperledger Fabric](https://github.com/hyperledger/fabric/pull/5529) | 17k | Database errors silently swallowed in multi-key ledger queries. | merged |
+| [Open Policy Agent](https://github.com/open-policy-agent/opa/pull/8887) | 12k | Integers above 64 bits lost precision in Rego arithmetic and aggregates, so policies decided on wrong numbers ([write-up](https://atishay.tech/journal/2026-09-26-precision-loss-in-a-policy-engine/)). Also restored error locations for rewritten head variables ([#8885](https://github.com/open-policy-agent/opa/pull/8885)). | [v1.19.0](https://github.com/open-policy-agent/opa/releases/tag/v1.19.0) |
+| [Meshery](https://github.com/meshery/meshery/pull/20733), [OpenEverest](https://github.com/openeverest/openeverest/pull/2851) | 12k | Nil-pointer crashes in MeshSync auto-registration and in JWT key loading. | [v1.0.60](https://github.com/meshery/meshery/releases/tag/v1.0.60), [v2.0.0-dev.2](https://github.com/openeverest/openeverest/releases/tag/v2.0.0-dev.2) |
+| [OpenTelemetry](https://atishay.tech/oss/open-telemetry-opentelemetry-python-contrib/) | 1.1k | 5 merged: `IndexError` on comment-only SQL statements in the psycopg, psycopg2 and SQLAlchemy instrumentations, and a Collector fix. | [v0.66b0](https://github.com/open-telemetry/opentelemetry-python-contrib/releases/tag/v0.66b0) |
+| [fedimint](https://atishay.tech/oss/fedimint-fedimint/) | 0.7k | 8 merged: panics on untrusted durations and timestamps, Lightning fee limits checked on both fee parts ([#8921](https://github.com/fedimint/fedimint/pull/8921)), deposit retries the Bitcoin backend cannot prove ([#9202](https://github.com/fedimint/fedimint/pull/9202)). | [v0.12.0](https://github.com/fedimint/fedimint/releases/tag/v0.12.0), [v0.13.0](https://github.com/fedimint/fedimint/releases/tag/v0.13.0) |
+
+Also merged in Braidpool (6), openswap (4), pyannote-metrics (3), Google's MaxText, rust-lightning, pixi, Kmesh, pypdf, the Kubernetes website and others. [Full list](https://atishay.tech/oss/).
 
 ### Things I built
 
